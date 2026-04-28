@@ -1,0 +1,29 @@
+[project]
+name = "multimodal-lead-intelligence-platform"
+version = "0.1.0"
+description = "Production-grade MVP for a multimodal multi-agent lead intelligence platform."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115.0,<1.0.0",
+  "uvicorn[standard]>=0.32.0,<1.0.0",
+  "sqlalchemy>=2.0.36,<3.0.0",
+  "pydantic>=2.9.2,<3.0.0",
+  "pydantic-settings>=2.6.0,<3.0.0",
+  "python-dotenv>=1.0.1,<2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.3,<9.0.0",
+  "httpx>=0.27.2,<1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=75.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
